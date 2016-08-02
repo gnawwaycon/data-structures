@@ -7,7 +7,7 @@ var Stack = function() {
 //
 //
 Stack.prototype.push = function(str){
-  this.arr.push(str);
+  this.arr[this.length] = str;
   this.length++;
 }
 //
@@ -23,4 +23,14 @@ Stack.prototype.size = function () {
   return this.length;
 };
 //
-// var stack = new Stack();
+var stack = new Stack();
+
+stack.push('a');
+
+console.log(stack.pop());
+
+stack.push('b');
+stack.push('c');
+
+
+console.log(stack.pop());
